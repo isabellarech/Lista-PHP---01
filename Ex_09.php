@@ -4,9 +4,9 @@
 
 function analisarNumeros($numero) {
     if ($numero % 2 == 0) {
-        $parImpar = "par";
+        $parImpar = "Par";
     } else {
-        $parImpar = "ímpar";
+        $parImpar = "Ímpar";
     }
 
     $primo = "Primo";
