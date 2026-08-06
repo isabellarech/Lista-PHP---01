@@ -5,7 +5,7 @@
 function ordenarNomes($nomes) {
     $vetor = explode(", ", $nomes);
 
-    foreach ($vetor as $nome) {
+    foreach ($vetor as &$nome) {
         $nome = trim($nome);
     }
 
@@ -17,7 +17,7 @@ function ordenarNomes($nomes) {
 
 $nomes = "Rafaella, João, Riquelme, Higor, Bernardo";
 
-echo "Nomes desordenados: " . ordenarNomes($nomes) . "<br>";
-echo "Nomes ordernados: " . ordenarNomes($nomes) . "<br>";
+echo "Nomes desordenados: " . $nomes . "<br>";
+echo "Nomes ordenados: " . ordenarNomes($nomes);
 
 ?>
