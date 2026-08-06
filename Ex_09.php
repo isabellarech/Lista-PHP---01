@@ -1,6 +1,6 @@
 <?php
 
-// Exercício 09 - Sistema de Notas
+// Exercício 09 - Verificador Matemático
 
 function analisarNumeros($numero) {
     if ($numero % 2 == 0) {
