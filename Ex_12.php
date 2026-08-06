@@ -16,9 +16,9 @@ $resultado .= "<br>Produto mais barato: R$" . $menorPreco;
 $resultado .= "<br>Média de preço: R$" . $mediaPreco;
 
 if(array_key_exists($pesquisa, $produtos)){
-    $resultado .= "<br>O produto informado " . $pesquisa . " está disponível por R$" . $produtos[$pesquisa];
+    $resultado .= "<br>O produto  " . $pesquisa . " está disponível por R$" . $produtos[$pesquisa];
 } else {
-    $resultado .= "<br>O produto informado " . $pesquisa . " não está disponível.";
+    $resultado .= "<br>O produto  " . $pesquisa . " não está disponível.";
 }
 
 return $resultado;
