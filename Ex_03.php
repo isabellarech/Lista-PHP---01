@@ -3,7 +3,7 @@
 // Exercício 03 - Cadastro Seguro
 
 function mascararCPF($cpf) {
-    $partereal = substr($cpf, -4);
+    $partereal = substr($cpf, -5);
     return "***.***.***-" . $partereal;
 }
 
