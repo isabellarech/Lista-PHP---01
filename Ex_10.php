@@ -2,45 +2,35 @@
 
 // Exercício 10 - Sistema de Notas
 
-function analisarNumeros($numero) {
-    if ($numero % 2 == 0) {
-        $parImpar = "Par";
-    } else {
-        $parImpar = "Ímpar";
-    }
+function calcularMedia($notas) {
 
-    $primo = "Primo";
+$maiorNota = max($notas);
+$menorNota = min($notas);
 
-    if ($numero < 2) {
-        $primo = "Não é primo";
-    } else {
-        for ($i = 2; $i <= sqrt($numero); $i++) {
-            if ($numero % $i == 0) {
-                $primo = "Não é primo";
-                break;
-            }
-        }
-    }
-
-    $soma = 0;
-
-    for ($i = 1; $i < $numero; $i++) {
-        $soma += $i;
-    }
-
-    if ($soma == $numero) {
-        $perfeito = "É perfeito";
-    } else {
-        $perfeito = "Não é perfeito";
-    }
-
-    return "Número: $numero<br>
-    Par ou ímpar: $parImpar<br>
-    Primo: $primo<br>
-    Perfeito: $perfeito<br>";
+$soma = 0;
+foreach ($notas as $nota) {
+    $soma += $nota;
 }
 
-$numero = 32;
+$media = $soma / count($notas);
 
-echo analisarNumeros($numero);
+if ($media >= 7) {
+    $situacao = "Aprovado";
+} else if ($media >= 5) {
+    $situacao = "Recuperação";
+} else {
+    $situacao = "Reprovado";
+}
+
+return "Maior nota: $maiorNota<br>
+Menor nota: $menorNota<br>
+Média: $media<br>
+Situação: $situacao<br>";
+}
+
+$notas = [8, 6, 9, 5, 7];
+
+echo "Notas: " . implode(", ", $notas) . "<br>";
+echo calcularMedia($notas);
+
 ?>
