@@ -4,12 +4,10 @@
 
 function mascararCPF($cpf) {
     $partereal = substr($cpf, -4);
-    $CpfMascarado = "***.***.***-" . $partereal;
-
-    echo "CPF mascarado: " . $CpfMascarado . "<br>";
+    return "***.***.***-" . $partereal;
 }
 
 $cpf = "123.456.789-00";
-mascararCPF($cpf);
+echo "CPF mascarado: " . mascararCPF($cpf);
 
 ?>
