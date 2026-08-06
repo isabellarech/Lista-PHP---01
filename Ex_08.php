@@ -17,7 +17,7 @@ function ordenarNomes($nomes) {
 
 $nomes = "Rafaella, João, Riquelme, Higor, Bernardo";
 
-echo "Nomes desordenados: " . ordenarNomes($nomes);
+echo "Nomes desordenados: " . ordenarNomes($nomes) . "<br>";
 echo "Nomes ordernados: " . ordenarNomes($nomes) . "<br>";
 
 ?>
