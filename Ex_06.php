@@ -3,8 +3,8 @@
 // Exercício 06 - Conversor de Temperatura
 
 function converterTemperatura(float $valor, string $origem, string $destino): float {
-    $origem = strtupper($origem);
-    $destino = strtupper($destino);
+    $origem = strtoupper($origem);
+    $destino = strtoupper($destino);
 
     $celsius = match ($origem) {
         'C' => $valor,
